@@ -797,6 +797,7 @@ async def on_message(message):
 				hangpeople=[]
 				async for hangcount in client.logs_from(client.get_channel('423957428263059467'), limit=10,reverse=True):
 					hangpeople.append(hangcount.content)
+				deletethishmmsg2=None
 				while True:
 					hmunderscores=''
 					hmunderscoresleft=''
@@ -1566,6 +1567,7 @@ async def on_socket_raw_receive(msg):
 	#await client.send_message(client.get_channel('422155643164819465'),'{0} has joined {1}'.format(str(member.name),str(member.server.name)))
 
 try:
-	client.run(open('token.txt').read())
-except:
-	print("Error logging in.")
+	with open('token.txt') as token:
+		client.run(token.read())
+except Exception as e:
+	print("Error logging in.",e)
