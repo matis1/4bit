@@ -1566,6 +1566,6 @@ async def on_socket_raw_receive(msg):
 	#await client.send_message(client.get_channel('422155643164819465'),'{0} has joined {1}'.format(str(member.name),str(member.server.name)))
 
 try:
-	client.run('Mzg2MzMzOTA5MzYyOTMzNzcy.DX35yQ.DH1-jaGe8xBXtV4WAF_mgH88CTs')
+	client.run('')
 except:
 	print("Error logging in.")
