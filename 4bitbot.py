@@ -775,7 +775,7 @@ async def on_message(message):
 					except ValueError:
 						await client.send_message(message.channel,'Invalid answer. Type \'exit\' if you\'d like to stop playing the game.')
 		if args[0] == "/hangman":
-			word_site = "https://raw.githubusercontent.com/Xethron/Hangman/master/words.txt"
+			word_site = "https://raw.githubusercontent.com/Tom25/Hangman/master/wordlist.txt"
 			with urllib.request.urlopen(word_site) as response:
 				html = response.read()
 				words = str(html).split("\\n")
